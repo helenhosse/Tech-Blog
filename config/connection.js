@@ -12,4 +12,3 @@ const sequelize = process.env.JAWSDB_URL
 
 module.exports = sequelize;
 
-// might need to change with heroku

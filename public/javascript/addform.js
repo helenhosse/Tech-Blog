@@ -10,7 +10,7 @@ async function newFormHandler(event) {
             title,
             post_body
         }),
-        hearders: {
+        headers: {
             'Content-Type': 'application/json'
         }
     });

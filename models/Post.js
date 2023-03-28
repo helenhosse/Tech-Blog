@@ -35,9 +35,4 @@ Post.init(
     }
 );
 
-MediaStreamAudioSourceNode.exports = Post;
-
-
-
-
 module.exports = Post;

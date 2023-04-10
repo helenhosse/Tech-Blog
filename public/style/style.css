@@ -135,7 +135,6 @@ input {
   border: none;
   outline: none;
   background-color: var(--primary);
-  align: left;
 }
 
 .btn-small:hover {

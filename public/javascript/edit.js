@@ -1,29 +1,29 @@
-async function editFormHandler(event) {
+const id = document.querySelector('#editBtn').getAttribute('data-id');
+
+const newFormHandler = async (event) => {
     event.preventDefault();
+    console.log('test');
+    const name = document.querySelector('#post-name').value.trim();
+    const content = document.querySelector('#post-content').value.trim();
+
+          console.log(id)
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_body = document.querySelector('input[name="post-body"]').value;
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-      ];
-  
-    const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`/api/post/${id}/edit/`, {
         method: 'PUT',
-        body: JSON.stringify({
-            title,
-            post_body
-        }),
+        body: JSON.stringify({ name, content, id }),
         headers: {
-            'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       });
-      
+  
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert('Failed to create post');
       }
-  }
-  
-  document.querySelector('#edit-post-form').addEventListener('submit', editFormHandler);
-  
+    
+  };
+
+  document
+    .querySelector('.new-edit-form')
+    .addEventListener('submit', newFormHandler);

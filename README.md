@@ -6,7 +6,7 @@ This is a website that uses the CRUD methods on different types of tech posts. I
 
 ## Visual Representation
 
-
+<img src="public/assets/Screenshot%202023-04-21%20203138.png" alt="screenshot of the blog">
 
 ## User Story 
 

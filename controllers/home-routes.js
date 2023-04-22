@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
-router.get('/', (res, req) => {
+router.get('/', (req, res) => {
     console.log('========================');
     Post.findAll({
         attributes: [
@@ -34,7 +34,7 @@ router.get('/', (res, req) => {
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
 
-        res.prependListener('homepage', {
+        res.render('homepage', {
             posts,
             loggedIn: req.session.loggedIn
         });

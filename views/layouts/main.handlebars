@@ -4,12 +4,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/Tech-Blog/public/style/style.css">
+  <title>Tech Blog!</title>
+  <link rel="stylesheet" href="/style/style.css">
   <title>Tech Blog</title>
+  <base href="/" />
 </head>
-
 <body>
-    body here
-</body>
+    <header>
+        <div id="headerDiv"><h1><a href="/" id="titleLink">The Wonderful World of Tech</a></h1>
+        <div id="navbar">
+       {{#if logged_in}}
+        <a href="/views/addform.handlebars"><button id="create">Create a New Post</button></a>
+        <button id="logout">Log Out</button>
+        {{else}}
+        <a href="/views/login.handlebars"><button id="login">Log In</button></a>
+        {{/if}}
+    </div>
+        
+        </div>
+    </header>
 
+
+
+
+<main>
+
+<div id="main">
+
+    {{{ body }}}
+
+</div>
+
+</main>
+
+{{#if logged_in}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+
+</body>
+</html><body>
+    <header>
+        <div id="headerDiv"><h1><a href="/" id="titleLink">The Wonderful World of Tech</a></h1>
+        <div id="navbar">
+       {{#if logged_in}}
+        <a href="/create"><button id="create">Create a New Post</button></a>
+        <button id="logout">Log Out</button>
+        {{else}}
+        <a href="/login"><button id="login">Log In</button></a>
+        {{/if}}
+    </div>
+        
+        </div>
+    </header>
+
+
+
+
+<main>
+
+<div id="main">
+
+    {{{ body }}}
+
+</div>
+
+</main>
+
+{{#if logged_in}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+
+</body>
 </html>

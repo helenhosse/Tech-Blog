@@ -1,13 +1,42 @@
-<form id="login-form" class="form-signin">
-    <h1 class="mb-3 font-weight-normal text-center">Please sign in</h1>
-    <label for="email-input-login" class="sr-only">email</label>
-    <input type="text" id="email-input-login" class="form-control" placeholder="Email address" required autofocus>
-    <label for="password-input-login" class="sr-only">Password</label>
-    <input type="password" id="password-input-login" class="form-control" placeholder="Password" required>
+
+<h2>Login</h2>
+<div>
+    <form class="form login-form">
+    <div class="form-group">
+    <label for="email-login">email:</label>
+    <input class="form-input" type="text" id="email-login" />
     </div>
-    <button type="submit" id="login-btn" class="btn">Login</button>
-    <a type="button" href="/Tech-Blog/views/signup.handlebars" class="mb-3">Sign up</a>
-</form>
+    <div class="form-group">
+    <label for="password-login">password:</label>
+    <input class="form-input" type="password" id="password-login" />
+    </div>
+    <div class="form-group">
+    <button class="btn btn-primary" type="submit">login</button>
+    </div>
+    </form>
+
+</div>
+
+<h2>Sign Up</h2>
+<div>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+</div>
 
 
-<script src="/Tech-Blog/public/javascript/login.js>
+<script src="/public/javascript/login.js"></script>

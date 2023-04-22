@@ -6,6 +6,8 @@ This is a website that uses the CRUD methods on different types of tech posts. I
 
 ## Visual Representation
 
+
+
 ## User Story 
 
 AS A developer who writes about tech I WANT a CMS-style blog siteI WANT a CMS-style blog site SO THAT I can publish articles, blog posts, and my thoughts and opinionsSO THAT I can publish articles, blog posts, and my thoughts and opinion

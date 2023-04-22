@@ -1,8 +1,11 @@
-{{#each posts as |post|}}
+<div class="post">
+    
+    {{#each posts as |post|}}
 
-{{> post-info post }}
+    <h2><a href="/post/{{post.id}}">{{post.name}}</a></h2>
+   <p>Created by {{user.name}} on {{date_created}}</p>
+  <p>{{content}}</p>
+
+    {{/each}}
+
 </div>
-
-{{else}}
-<h6 class="label">There are no currently posts!</h6>
-{{/each}}

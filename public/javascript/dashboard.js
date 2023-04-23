@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
 		});
 
 		if (response.ok) {
-			document.location.replace('/dashboard');
+			document.location.replace('/views/dashboard');
 		} else {
 			alert('Failed post');
 		}
@@ -31,7 +31,7 @@ const delButtonHandler = async (event) => {
 		});
 
 		if (response.ok) {
-			document.location.replace('/dashboard');
+			document.location.replace('/views/dashboard');
 		} else {
 			alert('Failed deletion');
 		}

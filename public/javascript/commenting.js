@@ -1,42 +1,30 @@
-const subBtn = document.getElementById('#submitBtn');
-const id = document.querySelector('#deleteBtn').getAttribute('data-id');
+const commentFormHandler = async function (event) {
+	event.preventDefault();
 
-const commentFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const comment = document.querySelector('#post-comment').value.trim();
-    
-    if (comment) {
+	const post_id = document.querySelector('.newComment').dataset.post;
 
+	const comment_description = document.querySelector('#comment_description').value.trim();
+	console.log(post_id, comment_description)
+	if (comment_description) {
+		const response = await fetch('/api/comment', {
+			method: 'POST',
+			body: JSON.stringify({
+				post_id,
+				comment_description,
+			}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+		if (response.ok) {
+			document.location.reload();
+		} else {
+			alert('Failed comment');
+		}
+	}
+	
+};
 
-      const response = await fetch(`api/post/comment/${id}`, {
-        method: 'POST',
-        body: JSON.stringify({ id, comment }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to create post');
-        console.log(err);
-      }
-    }
-  };
-  
-
-const test = async (event)  => {
-  event.preventDefault();
-
-  const comment = document.querySelector('#post-comment').value.trim();
-
-  console.log(comment);
-  console.log(id);
-
-}
-
-  document
-    .querySelector('.new-comment-form')
-    .addEventListener('submit', commentFormHandler); 
+document
+	.querySelector('.newComment')
+	.addEventListener('submit', commentFormHandler);

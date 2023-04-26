@@ -6,7 +6,7 @@ This is a website that uses the CRUD methods on different types of tech posts. I
 
 ## Visual Representation
 
-<img src="public/assets/Screenshot%202023-04-21%20203138.png" alt="screenshot of the blog">
+<img src="public/assets/Screenshot%202023-04-22%20213708.png" alt="screenshot of the blog">
 
 ## User Story 
 
@@ -29,7 +29,7 @@ Heroku
 
 ## Links for Submission
 
-Deployed heroku site: https://git.heroku.com/agile-fortress-57095.git
+Deployed heroku site: https://agile-fortress-57095.herokuapp.com/git
 
 Github Repository: https://github.com/helenhosse/Tech-Blog.git
 

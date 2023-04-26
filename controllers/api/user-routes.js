@@ -58,6 +58,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // expects {username: 'test', password: 'password1234'}
+  console.log(req.body,"User Signup")
   User.create({
     username: req.body.username,
     email: req.body.email,

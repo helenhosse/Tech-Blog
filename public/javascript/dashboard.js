@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
 		});
 
 		if (response.ok) {
-			document.location.replace('/views/dashboard');
+			document.location.replace('/dashboard');
 		} else {
 			alert('Failed post');
 		}

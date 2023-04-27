@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
 	const description = document.querySelector('#postDesc').value.trim();
 
 	if (title && description) {
-		const response = await fetch('/api/post', {
+		const response = await fetch('/api/posts', {
 			method: 'POST',
 			body: JSON.stringify({ title, description }),
 			headers: {
@@ -31,7 +31,7 @@ const delButtonHandler = async (event) => {
 		});
 
 		if (response.ok) {
-			document.location.replace('/views/dashboard');
+			document.location.replace('/dashboard');
 		} else {
 			alert('Failed deletion');
 		}
